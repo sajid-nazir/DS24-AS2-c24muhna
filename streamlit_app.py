@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.impute import SimpleImputer
 
 # Load the model
-model_uri = "runs:/157958cbd0e64c819a98fc9693844cd8/model"
+model_uri = "file:///app/mlruns/895373400277021307/157958cbd0e64c819a98fc9693844cd8/artifacts/model"
 model = mlflow.tensorflow.load_model(model_uri)
 
 # Define the input features
