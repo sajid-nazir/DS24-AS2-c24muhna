@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/sajid/Desktop/Flow/mlruns/895373400277021307/7f14dfc176c8447898b6a3eb016e60c1/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '895373400277021307'
+lifecycle_stage: active
+run_id: 7f14dfc176c8447898b6a3eb016e60c1
+run_name: skittish-mule-16
+run_uuid: 7f14dfc176c8447898b6a3eb016e60c1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734625824645
+status: 1
+tags: []
+user_id: sajid

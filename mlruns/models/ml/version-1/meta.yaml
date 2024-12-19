@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1734100210443
+current_stage: None
+description: ''
+last_updated_timestamp: 1734100210443
+name: ml
+run_id: b2e1a6ee823445fca8369a54db8f43f9
+run_link: ''
+source: mlflow-artifacts:/932508242658220903/b2e1a6ee823445fca8369a54db8f43f9/artifacts/rf_apples
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/932508242658220903/b2e1a6ee823445fca8369a54db8f43f9/artifacts/rf_apples
+user_id: null
+version: 1

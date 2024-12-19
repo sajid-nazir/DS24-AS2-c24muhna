@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/sajid/Desktop/Flow/mlruns/895373400277021307/a33d6293ec4b4c1aa15c8e4b7067c981/artifacts
+end_time: 1734556942080
+entry_point_name: ''
+experiment_id: '895373400277021307'
+lifecycle_stage: active
+run_id: a33d6293ec4b4c1aa15c8e4b7067c981
+run_name: aged-stag-312
+run_uuid: a33d6293ec4b4c1aa15c8e4b7067c981
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734556922730
+status: 3
+tags: []
+user_id: sajid

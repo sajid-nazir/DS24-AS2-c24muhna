@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/932508242658220903/b2e1a6ee823445fca8369a54db8f43f9/artifacts
+end_time: 1734099237540
+entry_point_name: ''
+experiment_id: '932508242658220903'
+lifecycle_stage: active
+run_id: b2e1a6ee823445fca8369a54db8f43f9
+run_name: apples_rf_test
+run_uuid: b2e1a6ee823445fca8369a54db8f43f9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734099228596
+status: 3
+tags: []
+user_id: sajid
