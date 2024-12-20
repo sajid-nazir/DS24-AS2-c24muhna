@@ -47,25 +47,27 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Set up Azure CLI
-        uses: azure/setup-azure-cli@v1
+      - name: Azure CLI Action
+        uses: Azure/cli@v2.1.0
         with:
-          azure-cli-version: latest
+          inlineScript: |
+            az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} \
+                     -p ${{ secrets.AZURE_CLIENT_SECRET }} \
+                     --tenant ${{ secrets.AZURE_TENANT_ID }}
 
-      - name: Log in to Azure
-        run: |
-          az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
+            # Create Azure Resource Group
+            az group create --name MyResourceGroup --location eastus
 
-      - name: Create Azure Resource Group (if it doesn't exist)
-        run: |
-          az group create --name MyResourceGroup --location eastus
+            # Create Azure App Service Plan
+            az appservice plan create --name github-actions-sp \
+                                       --resource-group MyResourceGroup \
+                                       --sku B1 --is-linux
 
-      - name: Create Azure App Service Plan (if it doesn't exist)
-        run: |
-          az appservice plan create --name github-actions-sp --resource-group MyResourceGroup --sku B1 --is-linux
-
-      - name: Deploy to Azure App Service
-        run: |
-          az webapp up --name forest-fires --resource-group MyResourceGroup --plan github-actions-sp --sku B1 --runtime "DOCKER|${{ secrets.DOCKER_USERNAME }}/streamlit-ml-app"
+            # Deploy to Azure App Service
+            az webapp up --name forest-fires \
+                         --resource-group MyResourceGroup \
+                         --plan github-actions-sp \
+                         --sku B1 \
+                         --runtime "DOCKER|${{ secrets.DOCKER_USERNAME }}/streamlit-ml-app"
