@@ -63,11 +63,11 @@ jobs:
             # Create Azure App Service Plan
             az appservice plan create --name github-actions-sp \
                                        --resource-group MyResourceGroup \
-                                       --sku B1 --is-linux
+                                       --sku F1 --is-linux
 
             # Deploy to Azure App Service
             az webapp up --name forest-fires \
                          --resource-group MyResourceGroup \
                          --plan github-actions-sp \
-                         --sku B1 \
+                         --sku F1 \
                          --runtime "DOCKER|${{ secrets.DOCKER_USERNAME }}/streamlit-ml-app"
