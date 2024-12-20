@@ -58,7 +58,7 @@ jobs:
                      --tenant ${{ secrets.AZURE_TENANT_ID }}
 
             # Create Azure Resource Group
-            az group create --name MyResourceGroup --location eastus
+            az group create --name MyResourceGroup --location westus
 
             # Create Azure App Service Plan
             az appservice plan create --name github-actions-sp \
